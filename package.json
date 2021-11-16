@@ -5,9 +5,13 @@
   "repository": "https://github.com/moniqx4/PlayWrightTypescriptJestStarterProject.git",
   "author": "",
   "license": "MIT",
+  "scripts": {
+    "test": "jest"
+  },
   "devDependencies": {
     "@playwright/test": "^1.16.3",
     "@types/jest": "^27.0.2",
+    "@types/node": "^16.11.7",
     "jest": "^27.3.1",
     "jest-junit": "^13.0.0",
     "jest-junit-reporter": "^1.1.0",
