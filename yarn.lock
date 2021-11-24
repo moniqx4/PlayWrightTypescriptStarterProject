@@ -945,6 +945,13 @@ axios@^0.21.1:
   dependencies:
     follow-redirects "^1.14.0"
 
+axios@^0.24.0:
+  version "0.24.0"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.24.0.tgz#804e6fa1e4b9c5288501dd9dff56a7a0940d20d6"
+  integrity sha512-Q6cWsys88HoPgAaFAVUb0WpPk0O8iTeisR9IMqy9G8AbO4NlpVknrnQS03zzF9PGAWgO3cgletO3VjV/P7VztA==
+  dependencies:
+    follow-redirects "^1.14.4"
+
 babel-jest@^27.3.1:
   version "27.3.1"
   resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-27.3.1.tgz#0636a3404c68e07001e434ac4956d82da8a80022"
@@ -1578,7 +1585,7 @@ find-up@^4.0.0, find-up@^4.1.0:
     locate-path "^5.0.0"
     path-exists "^4.0.0"
 
-follow-redirects@^1.14.0:
+follow-redirects@^1.14.0, follow-redirects@^1.14.4:
   version "1.14.5"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.5.tgz#f09a5848981d3c772b5392309778523f8d85c381"
   integrity sha512-wtphSXy7d4/OR+MvIFbCVBDzZ5520qV8XfPklSN5QtxuMUJZ+b0Wnst1e1lCDocfzuCkHqj8k0FpZqO+UIaKNA==
@@ -2884,12 +2891,34 @@ playwright-core@=1.16.3, playwright-core@>=1.2.0, playwright-core@^1.16.3:
     yauzl "^2.10.0"
     yazl "^2.5.1"
 
-playwright@^1.16.3:
-  version "1.16.3"
-  resolved "https://registry.yarnpkg.com/playwright/-/playwright-1.16.3.tgz#27a292d9fa54fbac923998d3af58cd2b691f5ebe"
-  integrity sha512-nfJx/OpIb/8OexL3rYGxNN687hGyaM3XNpfuMzoPlrekURItyuiHHsNhC9oQCx3JDmCn5O3EyyyFCnrZjH6MpA==
+playwright-core@=1.17.0-rc1:
+  version "1.17.0-rc1"
+  resolved "https://registry.yarnpkg.com/playwright-core/-/playwright-core-1.17.0-rc1.tgz#b893cacfbfe4e339c261670699a544d73605d20b"
+  integrity sha512-aKAUlLxK043+e9XqEBqNGUdQeehze+vRCzoIBWIf7INC+5DK3ZoFmXVV60O7fraXc7REXniK+0FzzTW/egAscg==
   dependencies:
-    playwright-core "=1.16.3"
+    commander "^8.2.0"
+    debug "^4.1.1"
+    extract-zip "^2.0.1"
+    https-proxy-agent "^5.0.0"
+    jpeg-js "^0.4.2"
+    mime "^2.4.6"
+    pngjs "^5.0.0"
+    progress "^2.0.3"
+    proper-lockfile "^4.1.1"
+    proxy-from-env "^1.1.0"
+    rimraf "^3.0.2"
+    socks-proxy-agent "^6.1.0"
+    stack-utils "^2.0.3"
+    ws "^7.4.6"
+    yauzl "^2.10.0"
+    yazl "^2.5.1"
+
+playwright@1.17.0-rc1:
+  version "1.17.0-rc1"
+  resolved "https://registry.yarnpkg.com/playwright/-/playwright-1.17.0-rc1.tgz#78d04a9ee8c4efb99199fd3a3a1ff531a7c76930"
+  integrity sha512-oFHqjqsPboX0NTVbHiltEVMCGvfwVf4IboIDE/j9g4lkrb8BmsUeHmfubZxzmDNrHPobyRbau+B0wR7HeTLaVQ==
+  dependencies:
+    playwright-core "=1.17.0-rc1"
 
 pngjs@^4.0.1:
   version "4.0.1"

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="2" failures="1" errors="0" time="24.433">
+  <testsuite name="Test Playground Tests" errors="0" failures="1" skipped="0" timestamp="2021-11-23T21:37:07" time="23.437" tests="2">
+    <testcase classname="TEST PLAYGROUND TESTS" name="Test Playground Tests clicking button that ignores dom event " time="2.157">
+    </testcase>
+    <testcase classname="TEST PLAYGROUND TESTS" name="Test Playground Tests checking element visibility" time="20.028">
+      <failure>Error: thrown: &quot;Exceeded timeout of 20000 ms for a test.
+Use jest.setTimeout(newTimeout) to increase the timeout value, if this is a long-running test.&quot;
+    at D:\Projects\Automation\PlayWrightTypescriptJestStarterProject\src\tests\TestPlayGroundExampleTest.ts:12:3
+    at _dispatchDescribe (D:\Projects\Automation\PlayWrightTypescriptJestStarterProject\node_modules\jest-circus\build\index.js:97:26)
+    at describe (D:\Projects\Automation\PlayWrightTypescriptJestStarterProject\node_modules\jest-circus\build\index.js:60:5)
+    at Object.&lt;anonymous&gt; (D:\Projects\Automation\PlayWrightTypescriptJestStarterProject\src\tests\TestPlayGroundExampleTest.ts:1:83)
+    at Runtime._execModule (D:\Projects\Automation\PlayWrightTypescriptJestStarterProject\node_modules\jest-runtime\build\index.js:1646:24)
+    at Runtime._loadModule (D:\Projects\Automation\PlayWrightTypescriptJestStarterProject\node_modules\jest-runtime\build\index.js:1185:12)
+    at Runtime.requireModule (D:\Projects\Automation\PlayWrightTypescriptJestStarterProject\node_modules\jest-runtime\build\index.js:1009:12)
+    at jestAdapter (D:\Projects\Automation\PlayWrightTypescriptJestStarterProject\node_modules\jest-circus\build\legacy-code-todo-rewrite\jestAdapter.js:79:13)
+    at runTestInternal (D:\Projects\Automation\PlayWrightTypescriptJestStarterProject\node_modules\jest-runner\build\runTest.js:389:16)
+    at runTest (D:\Projects\Automation\PlayWrightTypescriptJestStarterProject\node_modules\jest-runner\build\runTest.js:475:34)</failure>
+    </testcase>
+  </testsuite>
+</testsuites>
