@@ -6,7 +6,8 @@
   "author": "",
   "license": "MIT",
   "scripts": {
-    "test": "npx playwright test"
+    "test": "npx playwright test",
+    "lint": "./node_modules/.bin/tslint -p tsconfig.json"
   },
   "devDependencies": {
     "@playwright/test": "^1.16.3",
@@ -23,6 +24,7 @@
     "playwright-cli": "^0.180.0",
     "playwright-core": "^1.16.3",
     "ts-jest": "^27.0.7",
+    "tslint": "^6.1.3",
     "typescript": "^4.4.4"
   },
   "dependencies": {}

@@ -1,6 +1,9 @@
 module.exports = {
+  verbose: true,
   preset: "jest-playwright-preset",
   testMatch: ["**/src/tests/**/*.+(ts|js)", "**/?(*.)+(spec|test).+(ts|js)"],
+  globalSetup: "./global-setup.js",
+  globalTeardown: "./global-teardown.js",
   transform: {
     "^.+\\..(ts)$": "ts-jest",
   },
@@ -14,6 +17,11 @@ module.exports = {
         slowMo: 600,
       },
     },
+  },
+  debugOptions: {    
+    contextOptions: {
+      offline: true
+    }
   },
   reporters: [
     "default",

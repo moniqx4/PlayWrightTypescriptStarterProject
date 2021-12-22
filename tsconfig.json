@@ -5,6 +5,14 @@
     "strict": true,
     "module": "commonjs",
     "noEmit": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": ["@types/jest", "jest-playwright-preset", "expect-playwright"]
   },
-  "include": ["src"]
+  "include": ["src"],
+  "files": [
+    "./src/globalTypes.ts",
+    "node_modules/jest-playwright-preset/types/global.d.ts",
+    "node_modules/expect-playwright/global.d.ts"
+  ]
 }

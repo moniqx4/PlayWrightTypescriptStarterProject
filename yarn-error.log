@@ -14,8 +14,16 @@ Platform:
   win32 x64
 
 Trace: 
-  Error: getaddrinfo ENOTFOUND registry.yarnpkg.com
-      at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:71:26)
+  Error: https://registry.yarnpkg.com/-/npm/v1/security/audits: ESOCKETTIMEDOUT
+      at ClientRequest.<anonymous> (C:\Users\moniq\.yarn\lib\cli.js:141376:19)
+      at Object.onceWrapper (node:events:513:28)
+      at ClientRequest.emit (node:events:394:28)
+      at TLSSocket.emitRequestTimeout (node:_http_client:761:9)
+      at Object.onceWrapper (node:events:513:28)
+      at TLSSocket.emit (node:events:406:35)
+      at TLSSocket.Socket._onTimeout (node:net:486:8)
+      at listOnTimeout (node:internal/timers:557:17)
+      at processTimers (node:internal/timers:500:7)
 
 npm manifest: 
   {
@@ -26,12 +34,14 @@ npm manifest:
     "author": "",
     "license": "MIT",
     "scripts": {
-      "test": "npx playwright test"
+      "test": "npx playwright test",
+      "lint": "./node_modules/.bin/tslint -p tsconfig.json"
     },
     "devDependencies": {
       "@playwright/test": "^1.16.3",
       "@types/jest": "^27.0.2",
       "@types/node": "^16.11.7",
+      "axios": "^0.24.0",
       "dayjs": "^1.10.7",
       "expect-playwright": "^0.8.0",
       "jest": "^27.3.1",
@@ -42,6 +52,7 @@ npm manifest:
       "playwright-cli": "^0.180.0",
       "playwright-core": "^1.16.3",
       "ts-jest": "^27.0.7",
+      "tslint": "^6.1.3",
       "typescript": "^4.4.4"
     },
     "dependencies": {}
@@ -55,7 +66,7 @@ Lockfile:
   # yarn lockfile v1
   
   
-  "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.14.5", "@babel/code-frame@^7.16.0":
+  "@babel/code-frame@^7.0.0", "@babel/code-frame@^7.12.13", "@babel/code-frame@^7.14.5", "@babel/code-frame@^7.16.0":
     version "7.16.0"
     resolved "https://registry.yarnpkg.com/@babel/code-frame/-/code-frame-7.16.0.tgz#0dfc80309beec8411e65e706461c408b0bb9b431"
     integrity sha512-IF4EOMEV+bfYwOmNxGzSnjR2EmQod7f1UXOpZM3l4i4o4QNwzjtJAu/HxdjHq0aYBvdqMuQEY1eg0nqW9ZPORA==
@@ -998,6 +1009,13 @@ Lockfile:
     dependencies:
       follow-redirects "^1.14.0"
   
+  axios@^0.24.0:
+    version "0.24.0"
+    resolved "https://registry.yarnpkg.com/axios/-/axios-0.24.0.tgz#804e6fa1e4b9c5288501dd9dff56a7a0940d20d6"
+    integrity sha512-Q6cWsys88HoPgAaFAVUb0WpPk0O8iTeisR9IMqy9G8AbO4NlpVknrnQS03zzF9PGAWgO3cgletO3VjV/P7VztA==
+    dependencies:
+      follow-redirects "^1.14.4"
+  
   babel-jest@^27.3.1:
     version "27.3.1"
     resolved "https://registry.yarnpkg.com/babel-jest/-/babel-jest-27.3.1.tgz#0636a3404c68e07001e434ac4956d82da8a80022"
@@ -1126,6 +1144,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/buffer-from/-/buffer-from-1.1.2.tgz#2b146a6fd72e80b4f55d255f35ed59a3a9a41bd5"
     integrity sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==
   
+  builtin-modules@^1.1.1:
+    version "1.1.1"
+    resolved "https://registry.yarnpkg.com/builtin-modules/-/builtin-modules-1.1.1.tgz#270f076c5a72c02f5b65a47df94c5fe3a278892f"
+    integrity sha1-Jw8HbFpywC9bZaR9+Uxf46J4iS8=
+  
   caching-transform@^4.0.0:
     version "4.0.0"
     resolved "https://registry.yarnpkg.com/caching-transform/-/caching-transform-4.0.0.tgz#00d297a4206d71e2163c39eaffa8157ac0651f0f"
@@ -1164,7 +1187,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001280.tgz#066a506046ba4be34cde5f74a08db7a396718fb7"
     integrity sha512-kFXwYvHe5rix25uwueBxC569o53J6TpnGu0BEEn+6Lhl2vsnAumRFWEBhDft1fwyo6m1r4i+RqA4+163FpeFcA==
   
-  chalk@^2.0.0, chalk@^2.4.2:
+  chalk@^2.0.0, chalk@^2.3.0, chalk@^2.4.2:
     version "2.4.2"
     resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.4.2.tgz#cd42541677a54333cf541a49108c1432b44c9424"
     integrity sha512-Mti+f9lpJNcwF4tWV8/OrTTtF1gZi+f8FqlyAdouralcFWFQWF2+NgCHShjkCb+IFBLq9buZwE1xckQU4peSuQ==
@@ -1264,6 +1287,11 @@ Lockfile:
     integrity sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==
     dependencies:
       delayed-stream "~1.0.0"
+  
+  commander@^2.12.1:
+    version "2.20.3"
+    resolved "https://registry.yarnpkg.com/commander/-/commander-2.20.3.tgz#fd485e84c03eb4881c20722ba48035e8531aeb33"
+    integrity sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==
   
   commander@^3.0.2:
     version "3.0.2"
@@ -1410,6 +1438,11 @@ Lockfile:
     version "27.0.6"
     resolved "https://registry.yarnpkg.com/diff-sequences/-/diff-sequences-27.0.6.tgz#3305cb2e55a033924054695cc66019fd7f8e5723"
     integrity sha512-ag6wfpBFyNXZ0p8pcuIDS//D8H062ZQJ3fzYxjpmeKjnz8W4pekL3AI8VohmyZmsWW2PWaHgjsmqR6L13101VQ==
+  
+  diff@^4.0.1:
+    version "4.0.2"
+    resolved "https://registry.yarnpkg.com/diff/-/diff-4.0.2.tgz#60f3aecb89d5fae520c11aa19efc2bb982aade7d"
+    integrity sha512-58lmxKSA4BNyLz+HHMUzlOEpg09FV+ev6ZMe3vJihgdxzgcwZ8VoEEPmALCZG9LmqfVoNMMKpttIYTVG6uDY7A==
   
   domexception@^2.0.1:
     version "2.0.1"
@@ -1631,7 +1664,7 @@ Lockfile:
       locate-path "^5.0.0"
       path-exists "^4.0.0"
   
-  follow-redirects@^1.14.0:
+  follow-redirects@^1.14.0, follow-redirects@^1.14.4:
     version "1.14.5"
     resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.5.tgz#f09a5848981d3c772b5392309778523f8d85c381"
     integrity sha512-wtphSXy7d4/OR+MvIFbCVBDzZ5520qV8XfPklSN5QtxuMUJZ+b0Wnst1e1lCDocfzuCkHqj8k0FpZqO+UIaKNA==
@@ -2661,6 +2694,13 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/minimist/-/minimist-1.2.5.tgz#67d66014b66a6a8aaa0c083c5fd58df4e4e97602"
     integrity sha512-FM9nNUYrRBAELZQT3xeZQ7fmMOBg6nWNmJKTcgsJeaLstP/UODVpGsr5OhXhhXg6f+qtJ8uiZ+PUxkDWcgIXLw==
   
+  mkdirp@^0.5.3:
+    version "0.5.5"
+    resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.5.tgz#d91cefd62d1436ca0f41620e251288d420099def"
+    integrity sha512-NKmAlESf6jMGym1++R0Ra7wvhV+wFW63FaSOFPwRahvea0gMUcGUhVeAg/0BC0wiv9ih5NYPB1Wn1UEI1/L+xQ==
+    dependencies:
+      minimist "^1.2.5"
+  
   mkdirp@^1.0.4:
     version "1.0.4"
     resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-1.0.4.tgz#3eb5ed62622756d79a5f0e2a221dfebad75c2f7e"
@@ -3090,7 +3130,7 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/resolve.exports/-/resolve.exports-1.1.0.tgz#5ce842b94b05146c0e03076985d1d0e7e48c90c9"
     integrity sha512-J1l+Zxxp4XK3LUDZ9m60LRJF/mAe4z6a4xyabPHk7pvK5t35dACV32iIjJDFeWZFfZlO29w6SZ67knR0tHzJtQ==
   
-  resolve@^1.20.0:
+  resolve@^1.20.0, resolve@^1.3.2:
     version "1.20.0"
     resolved "https://registry.yarnpkg.com/resolve/-/resolve-1.20.0.tgz#629a013fb3f70755d6f0b7935cc1c2c5378b1975"
     integrity sha512-wENBPt4ySzg4ybFQW2TT1zMQucPK95HSh/nq2CFTZVOGut2+pQvSsgtda4d26YrYcr067wjbmzOG8byDPBX63A==
@@ -3140,6 +3180,11 @@ Lockfile:
     integrity sha512-PoeGJYh8HK4BTO/a9Tf6ZG3veo/A7ZVsYrSA6J8ny9nb3B1VrpkuN+z9OE5wfE5p6H4LchYZsegiQgbJD94ZFQ==
     dependencies:
       lru-cache "^6.0.0"
+  
+  semver@^5.3.0:
+    version "5.7.1"
+    resolved "https://registry.yarnpkg.com/semver/-/semver-5.7.1.tgz#a954f931aeba508d307bbf069eff0c01c96116f7"
+    integrity sha512-sauaDf/PZdVgrLTNYHRtpXa1iRiKcaebiKQ1BJdpQlWH2lCvexQdX55snPFyK7QzpudqbCI0qXFfOasHdyNDGQ==
   
   semver@^6.0.0, semver@^6.3.0:
     version "6.3.0"
@@ -3406,10 +3451,36 @@ Lockfile:
       semver "7.x"
       yargs-parser "20.x"
   
-  tslib@^1.9.0:
+  tslib@^1.13.0, tslib@^1.8.1, tslib@^1.9.0:
     version "1.14.1"
     resolved "https://registry.yarnpkg.com/tslib/-/tslib-1.14.1.tgz#cf2d38bdc34a134bcaf1091c41f6619e2f672d00"
     integrity sha512-Xni35NKzjgMrwevysHTCArtLDpPvye8zV/0E4EyYn43P7/7qvQwPh9BGkHewbMulVntbigmcT7rdX3BNo9wRJg==
+  
+  tslint@^6.1.3:
+    version "6.1.3"
+    resolved "https://registry.yarnpkg.com/tslint/-/tslint-6.1.3.tgz#5c23b2eccc32487d5523bd3a470e9aa31789d904"
+    integrity sha512-IbR4nkT96EQOvKE2PW/djGz8iGNeJ4rF2mBfiYaR/nvUWYKJhLwimoJKgjIFEIDibBtOevj7BqCRL4oHeWWUCg==
+    dependencies:
+      "@babel/code-frame" "^7.0.0"
+      builtin-modules "^1.1.1"
+      chalk "^2.3.0"
+      commander "^2.12.1"
+      diff "^4.0.1"
+      glob "^7.1.1"
+      js-yaml "^3.13.1"
+      minimatch "^3.0.4"
+      mkdirp "^0.5.3"
+      resolve "^1.3.2"
+      semver "^5.3.0"
+      tslib "^1.13.0"
+      tsutils "^2.29.0"
+  
+  tsutils@^2.29.0:
+    version "2.29.0"
+    resolved "https://registry.yarnpkg.com/tsutils/-/tsutils-2.29.0.tgz#32b488501467acbedd4b85498673a0812aca0b99"
+    integrity sha512-g5JVHCIJwzfISaXpXE1qvNalca5Jwob6FjI4AoPlqMusJ6ftFE7IkkFoMhVLRgK+4Kx3gkzb8UZK5t5yTTvEmA==
+    dependencies:
+      tslib "^1.8.1"
   
   type-check@~0.3.2:
     version "0.3.2"
