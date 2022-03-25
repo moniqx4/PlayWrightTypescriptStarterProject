@@ -7,7 +7,8 @@
     "noEmit": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "types": ["expect-playwright"]
+    "types": ["expect-playwright"],
+    "outDir": "./tests-out"
   },
   "include": ["src"],
   "files": [

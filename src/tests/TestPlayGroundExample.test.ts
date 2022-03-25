@@ -11,7 +11,9 @@ test.describe('Test Playground Tests', () => {
   })
 
   test('checking element visibility', async ({ page }) => {
-    await page.locator('#navbarSupportedContent > ul > li:nth-child(1) > a').click()
+    await page
+      .locator('#navbarSupportedContent > ul > li:nth-child(1) > a')
+      .click()
     await page.locator('text="Visibility"').click()
     await page.locator('text="Hide"').click()
     expect(page.locator('text="Removed"')).toBeNull()
