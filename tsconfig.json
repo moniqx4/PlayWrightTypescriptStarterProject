@@ -7,12 +7,11 @@
     "noEmit": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "types": ["@types/jest", "jest-playwright-preset", "expect-playwright"]
+    "types": ["expect-playwright"]
   },
   "include": ["src"],
   "files": [
     "./src/globalTypes.ts",
-    "node_modules/jest-playwright-preset/types/global.d.ts",
     "node_modules/expect-playwright/global.d.ts"
   ]
 }

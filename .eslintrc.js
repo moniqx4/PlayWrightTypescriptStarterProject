@@ -1,31 +1,23 @@
 module.exports = {
   root: true,
   parser: '@typescript-eslint/parser',
-  parserOptions: {    
-    project: [
-      './tsconfig.eslint.json',
-      './tsconfig.json'
-    ],
-    tsconfigRootDir: __dirname,
-  },  
-  plugins: [
-    '@typescript-eslint',
-    'jest',
-    'eslint-plugin',
-    'eslint-comments',
-  ],
+  parserOptions: {
+    project: ['./tsconfig.eslint.json', './tsconfig.json'],
+    tsconfigRootDir: __dirname
+  },
+  plugins: ['@typescript-eslint', 'eslint-plugin', 'eslint-comments'],
   env: {
     es6: true,
-    node: true,
+    node: true
   },
   extends: [
     'eslint:recommended',
     'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
-    'prettier',
+    'prettier'
   ],
-  rules: {   
-    'quotes': ['error', 'single', { 'allowTemplateLiterals': true }],
+  rules: {
+    quotes: ['error', 'single', { allowTemplateLiterals: true }],
     '@typescript-eslint/ban-ts-comment': [
       'error',
       {
@@ -33,15 +25,15 @@ module.exports = {
         'ts-ignore': true,
         'ts-nocheck': true,
         'ts-check': false,
-        minimumDescriptionLength: 5,
-      },
+        minimumDescriptionLength: 5
+      }
     ],
     '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
     '@typescript-eslint/explicit-function-return-type': 'error',
     '@typescript-eslint/explicit-module-boundary-types': 'off',
     '@typescript-eslint/no-empty-function': [
       'error',
-      { allow: ['arrowFunctions'] },
+      { allow: ['arrowFunctions'] }
     ],
     '@typescript-eslint/no-explicit-any': 'error',
     '@typescript-eslint/no-non-null-assertion': 'off',
@@ -57,12 +49,12 @@ module.exports = {
         allowBoolean: true,
         allowAny: true,
         allowNullish: true,
-        allowRegExp: true,
-      },
+        allowRegExp: true
+      }
     ],
     '@typescript-eslint/no-unused-vars': [
       'warn',
-      { varsIgnorePattern: '^_', argsIgnorePattern: '^_' },
-    ],  
+      { varsIgnorePattern: '^_', argsIgnorePattern: '^_' }
+    ]
   }
 }

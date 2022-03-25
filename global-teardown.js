@@ -1,6 +1,6 @@
-import { globalTeardown as playwrightGlobalTeardown } from "jest-playwright-preset";
+import { globalTeardown as playwrightGlobalTeardown } from 'playwright'
 
 module.exports = async function globalTeardown(globalConfig) {
   // Your global teardown
-  await playwrightGlobalTeardown(globalConfig);
-};
+  await playwrightGlobalTeardown(globalConfig)
+}
