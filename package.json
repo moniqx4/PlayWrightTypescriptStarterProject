@@ -1,5 +1,5 @@
 {
-  "name": "PlayWrightTypescriptStarterProject",
+  "name": "pw-typescript-starter-project",
   "version": "1.0.0",
   "main": "index.ts",
   "repository": "https://github.com/moniqx4/PlayWrightTypescriptStarterProject.git",
@@ -24,5 +24,7 @@
     "playwright-core": "^1.20.1",
     "typescript": "^4.6.3"
   },
-  "dependencies": {}
+  "dependencies": {
+    "dotenv": "^16.0.0"
+  }
 }

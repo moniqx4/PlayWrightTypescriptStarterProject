@@ -10,6 +10,7 @@ test.describe('Test Playground Tests', () => {
     expect(page.locator('.btn.btn-success')).toBeTruthy()
   })
 
+  /* Test purposely set to fail to show example of failures*/
   test('checking element visibility', async ({ page }) => {
     await page
       .locator('#navbarSupportedContent > ul > li:nth-child(1) > a')
