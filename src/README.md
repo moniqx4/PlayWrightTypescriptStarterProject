@@ -1,6 +1,6 @@
-# Getting Started with Playwright, Typescript with JEST
+# Getting Started with Playwright, and Typescript
 
-This is a starter project for Playwright, pre-configured with Typescript and JEST.
+This is a starter project for Playwright, pre-configured with Typescript.
 Playwright is a test automation tool for developing tests. [Playwright.dev](https://www.playwright.dev) for official docs
 
 Examples are testing against the UI Test Automation Playground page [UI Test Playground](http://www.uitestingplayground.com/)
@@ -22,3 +22,5 @@ Examples are testing against the UI Test Automation Playground page [UI Test Pla
 - tsconfig.json
 - global-setup
 - global-teardown
+
+## Updated with v1.20 of Playwright
