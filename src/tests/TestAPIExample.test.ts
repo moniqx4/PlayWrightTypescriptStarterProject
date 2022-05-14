@@ -26,7 +26,7 @@ test.describe('Test API Tests', () => {
   test('intercept call', async ({ page }) => {
     const responseObject = [
       {
-        author: 'Monica Tester',
+        author: 'Automated Tester',
         genre: 'novel',
         id: 1,
         price: '4.95',
@@ -53,7 +53,7 @@ test.describe('Test API Tests', () => {
     await page.goto('https://danube-webshop.herokuapp.com/')
 
     /* Takes a screenshot that can be viewed to see the webpage was displaying the changed item to what was in the responseObject set above */
-    await page.screenshot({ path: 'webshop_ss.png' })   
+    await page.screenshot({ path: 'webshop_ss.png' })
 
     await page.close()
   })

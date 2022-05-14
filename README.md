@@ -22,8 +22,8 @@ Examples are testing against the UI Test Automation Playground page [UI Test Pla
 - tsconfig.json
 - global-setup
 - global-teardown
-
-## Updated with v1.20 of Playwright
+- playwright.config
+## Updated with v1.22 of Playwright
 
 ## How to run tests
 
