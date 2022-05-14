@@ -1,11 +1,11 @@
 import { PlaywrightTestConfig } from '@playwright/test'
 
 const config: PlaywrightTestConfig = {
-  retries: 2,
+  retries: 1,
   reporter: 'line',
   use: {
     launchOptions: {
-      slowMo: 200
+      slowMo: 250
     },
     baseURL: 'http://uitestingplayground.com',
     headless: false,
@@ -13,7 +13,7 @@ const config: PlaywrightTestConfig = {
     video: 'on-first-retry',
     screenshot: 'only-on-failure',
     viewport: { width: 1024, height: 768 },
-    ignoreHTTPSErrors: true
+    ignoreHTTPSErrors: true,    
   }
 }
 

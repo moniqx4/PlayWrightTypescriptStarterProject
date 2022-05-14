@@ -2,6 +2,25 @@ import { test, expect } from '@playwright/test'
 
 test.describe('Test Playground Tests', () => {
   test.beforeEach(async ({ page }) => {
+    // this line allows logging of the requests being made during test, and writes it out to the console, method, resourceType and url
+    page.on('request', (req) =>
+      console.log(`<< : ${req.method()} ${req.resourceType()} ${req.url()})`)
+    )
+
+    // this line allows logging of the responses being made during test, and writes it out to the console with status and the url
+    page.on('response', (req) =>
+      console.log(`<< : ${req.status()} ${req.url()})`)
+    )
+
+    page.route('**.*', (route) => {
+      console.log(route.request().url())
+      // this will run without loading the image files
+      if (route.request().resourceType() === 'image') {
+        return route.abort()
+      }
+      return route.continue()
+    })
+
     await page.goto('/')
   })
   test('clicking button that ignores dom event ', async ({ page }) => {
