@@ -53,7 +53,7 @@ test.describe('Test API Tests', () => {
     await page.goto('https://danube-webshop.herokuapp.com/')
 
     /* Takes a screenshot that can be viewed to see the webpage was displaying the changed item to what was in the responseObject set above */
-    await page.screenshot({ path: 'webshop_ss.png' })
+    await page.screenshot({ path: 'test-artifacts/screenshots/webshop_ss.png' })
 
     await page.close()
   })

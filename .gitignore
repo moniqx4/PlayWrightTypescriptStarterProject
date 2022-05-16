@@ -1,12 +1,15 @@
 node_modules
-.vscode
+.vscode/settings.json
 yarn-error.log
 ./reports/*
 .env
 
-allure-results/*.*
-test-results/**/*.*
-
 *.png
 
+tests-out
 
+
+test-artifacts/screenshots/*.*
+test-artifacts/reports/*.*
+test-artifacts/reports/allure-reports/*.*
+test-artifacts/videos/*.*

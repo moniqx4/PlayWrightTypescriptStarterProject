@@ -10,10 +10,10 @@ const config: PlaywrightTestConfig = {
     baseURL: 'http://uitestingplayground.com',
     headless: false,
     trace: 'retain-on-failure',
-    video: 'on-first-retry',
+    video: 'retain-on-failure',
     screenshot: 'only-on-failure',
     viewport: { width: 1024, height: 768 },
-    ignoreHTTPSErrors: true,    
+    ignoreHTTPSErrors: true
   }
 }
 

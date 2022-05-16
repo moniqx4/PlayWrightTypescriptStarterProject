@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "allowJs": true,
+    "module": "commonjs",
+    "noImplicitAny": false,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "outDir": "tests-out",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,    
+  },
+  "include": [
+    "src/**/*"
+  ]
+}
