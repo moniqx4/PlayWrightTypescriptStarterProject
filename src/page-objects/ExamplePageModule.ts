@@ -1,7 +1,7 @@
 //annoymous Function
 const nameOfFunction = async () => {
   //Code here
-};
+}
 
 //named function
 async function nameOfFunction2() {
@@ -11,4 +11,4 @@ async function nameOfFunction2() {
 export const ExamplePageModule = {
   nameOfFunction,
   nameOfFunction2,
-};
+}
