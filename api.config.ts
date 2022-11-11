@@ -52,9 +52,8 @@ const config: PlaywrightTestConfig = {
 		ignoreHTTPSErrors: true,
 		storageState: 'state.json',
 		launchOptions: {
-			slowMo: 500,
 			headless: false,
-			tracesDir: '../test-artifacts/trace'
+			tracesDir: '../test-artifacts/api-trace'
 		}
 	},
 	/* Configure projects for major browsers - one for each environment */
@@ -65,15 +64,9 @@ const config: PlaywrightTestConfig = {
 				baseURL: '',
 				browserName: `chromium`,
 				channel: `chrome`,
-				viewport: { width: 1720, height: 850 },
-				screenshot: `only-on-failure`,
-				video: `retain-on-failure`,
-				trace: `retain-on-failure`,
-				storageState: 'state.json',
 				launchOptions: {
-					slowMo: 250,
-					headless: false,
-					tracesDir: '../test-artifacts/trace'
+					headless: true,
+					tracesDir: '../test-artifacts/api-trace'
 				},
 				...devices['Desktop Chrome']
 			}
