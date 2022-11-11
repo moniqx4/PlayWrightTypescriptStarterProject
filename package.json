@@ -1,32 +1,35 @@
 {
-  "name": "pw-typescript-starter-project",
-  "version": "1.0.0",
-  "main": "index.ts",
-  "repository": "https://github.com/moniqx4/PlayWrightTypescriptStarterProject.git",
-  "author": "",
-  "license": "MIT",
-  "scripts": {
-    "pretest": "tsc --incremenetal -p tests/tsconfig.json",
-    "test": "npx playwright test -c tests-out"
-  },
-  "devDependencies": {
-    "@playwright/test": "^1.27.0",
-    "@types/lodash": "^4.14.186",
-    "@types/node": "^18.8.3",
-    "@typescript-eslint/eslint-plugin": "^5.39.0",
-    "@typescript-eslint/parser": "^5.39.0",
-    "allure-playwright": "^2.0.0-beta.19",
-    "axios": "^1.1.2",
-    "dayjs": "^1.11.5",
-    "eslint": "^8.25.0",
-    "expect-playwright": "^0.8.0",
-    "lodash": "^4.17.21",
-    "playwright": "^1.27.0",
-    "playwright-cli": "^0.180.0",
-    "playwright-core": "^1.27.0",
-    "typescript": "^4.8.4"
-  },
-  "dependencies": {
-    "dotenv": "^16.0.3"
-  }
+	"name": "pw-typescript-starter-project",
+	"version": "1.0.0",
+	"main": "index.ts",
+	"repository": "https://github.com/moniqx4/PlayWrightTypescriptStarterProject.git",
+	"author": "",
+	"license": "MIT",
+	"scripts": {
+		"pretest": "tsc --incremenetal -p tests/tsconfig.json",
+		"test": "npx playwright test -c tests-out",
+		"tests:api": "playwright test --config=api.config.ts --project=Chromium"
+	},
+	"installConfig": {
+		"pnp": true
+	},
+	"dependencies": {
+		"@playwright/test": "^1.27.1",
+		"@types/lodash": "^4.14.188",
+		"@types/node": "^18.11.9",
+		"@typescript-eslint/eslint-plugin": "^5.42.1",
+		"@typescript-eslint/parser": "^5.42.1",
+		"allure-playwright": "^2.0.0-beta.19",
+		"axios": "^1.1.3",
+		"dayjs": "^1.11.6",
+		"dotenv": "^16.0.3",
+		"eslint": "^8.27.0",
+		"expect-playwright": "^0.8.0",
+		"lodash": "^4.17.21",
+		"playwright-cli": "^0.180.0",
+		"typescript": "^4.8.4"
+	},
+	"devDependencies": {
+		"prettier": "^2.7.1"
+	}
 }

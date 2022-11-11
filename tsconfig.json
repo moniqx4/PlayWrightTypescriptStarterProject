@@ -1,32 +1,29 @@
-{ 
-  "compilerOptions": { 
-    "target": "es5", 
-    "lib": ["DOM", "DOM.Iterable", "ESNext", "ES2015"], 
-    "strict": false, 
-    "module": "ES6", 
-    "moduleResolution": "node", 
-    "sourceMap": true, 
-    "noEmit": true, 
-    "esModuleInterop": true, 
-    "allowJs": true,    
-    "forceConsistentCasingInFileNames": false, 
-    "allowSyntheticDefaultImports": true, 
-    "skipLibCheck": true, 
-    "noEmitOnError": true, 
-    "noImplicitAny": false, 
-    "types": ["@types/node","@types/lodash"],     
-    "outDir": "./tests-out", 
-    "rootDir": ".", 
-    "baseUrl": ".", 
-  }, 
-  "include": ["*.ts"],  
-  "exclude": ["*.js"], 
-  "paths": { 
-    "@pages/*": ["pages-objects/*"],    
-    "@tests/*": ["tests/**/*"],     
-  }, 
-  "files": [ 
-    "global.d.ts"     
-  ]  
+{
+	"compilerOptions": {
+		"target": "es5",
+		"lib": ["DOM", "DOM.Iterable", "ESNext", "ES2015"],
+		"strict": false,
+		"module": "ES6",
+		"moduleResolution": "node",
+		"sourceMap": true,
+		"noEmit": true,
+		"esModuleInterop": true,
+		"allowJs": true,
+		"forceConsistentCasingInFileNames": false,
+		"allowSyntheticDefaultImports": true,
+		"skipLibCheck": true,
+		"noEmitOnError": true,
+		"noImplicitAny": false,
+		"types": ["@types/node", "@types/lodash"],
+		"outDir": "./tests-out",
+		"rootDir": ".",
+		"baseUrl": ".",
+		"paths": {
+			"@pages/*": ["pages-objects/*"],
+			"@tests/*": ["tests/*"]
+		}
+	},
+	"include": ["*.ts"],
+	"exclude": ["*.js"],
+	"files": ["global.d.ts"]
 }
-
