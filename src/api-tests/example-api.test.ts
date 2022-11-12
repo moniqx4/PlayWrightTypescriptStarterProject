@@ -1,14 +1,14 @@
 import { test, expect } from '@playwright/test'
+import { before } from 'lodash'
 
 const expectedResponse = {}
 
-test.describe.parallel('API Testing', () => {
+test.describe('API Testing', () => {
 	const baseUrl = 'https://regres.in.api'
 	const endpoint = '/users/3'
 	const postData = {
 		id: 1
 	}
-
 	const loginData = {}
 
 	test('Basic API Test - Assert Response Status', async ({ request }) => {

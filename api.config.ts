@@ -13,7 +13,7 @@ const config: PlaywrightTestConfig = {
 			'allure-playwright',
 			{
 				detail: true,
-				outputFolder: 'allure-apitest-report',
+				outputFolder: 'allure-test-report',
 				suiteTitle: false
 			}
 		]
