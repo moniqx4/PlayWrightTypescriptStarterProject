@@ -10,21 +10,21 @@
     "test": "npx playwright test -c tests-out"
   },
   "devDependencies": {
-    "@playwright/test": "^1.27.0",
-    "@types/lodash": "^4.14.186",
-    "@types/node": "^18.8.3",
-    "@typescript-eslint/eslint-plugin": "^5.39.0",
-    "@typescript-eslint/parser": "^5.39.0",
-    "allure-playwright": "^2.0.0-beta.19",
-    "axios": "^1.1.2",
-    "dayjs": "^1.11.5",
+    "@playwright/test": "^1.30.0",
+    "@types/lodash": "^4.14.191",
+    "@types/node": "^18.11.18",
+    "@typescript-eslint/eslint-plugin": "^5.50.0",
+    "@typescript-eslint/parser": "^5.50.0",
+    "allure-playwright": "^2.0.0-beta.25",
+    "axios": "^1.3.1",
+    "dayjs": "^1.11.7",
     "eslint": "^8.25.0",
     "expect-playwright": "^0.8.0",
     "lodash": "^4.17.21",
     "playwright": "^1.27.0",
     "playwright-cli": "^0.180.0",
     "playwright-core": "^1.27.0",
-    "typescript": "^4.8.4"
+    "typescript": "^4.9.5"
   },
   "dependencies": {
     "dotenv": "^16.0.3"

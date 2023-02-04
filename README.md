@@ -22,7 +22,7 @@ Examples are testing against the UI Test Automation Playground page [UI Test Pla
 - global-setup
 - global-teardown
 - playwright.config
-## Updated with v1.27 of Playwright
+## Updated with v1.30 of Playwright
 
 ## How to run tests
 

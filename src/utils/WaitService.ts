@@ -1,5 +1,4 @@
-import { expect } from '@playwright/test' 
-import { Page } from 'playwright-core' 
+import { expect, Page } from '@playwright/test' 
 
 /** The function takes in an endpoint path , wrapping to wait on some specified element action that fires off an api event, and then waits 
  * til that event has complete  

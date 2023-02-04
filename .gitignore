@@ -11,3 +11,5 @@ test-artifacts/videos/*.*
 .yarn
 node_modules
 *.code-workspace
+.vscode/settings.json
+.yarn

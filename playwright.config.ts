@@ -1,5 +1,6 @@
 import type { PlaywrightTestConfig } from '@playwright/test'; 
 import { devices } from '@playwright/test'; 
+import * as urls from 'src/common/environmentUrls'
 
 const config: PlaywrightTestConfig = {
   globalSetup: require.resolve('./global-setup'), 
@@ -38,7 +39,7 @@ const config: PlaywrightTestConfig = {
     /* Maximum time each action such as `click()` can take. Defaults to 0 (no limit). */ 
     actionTimeout: 0, 
     /* Base URL to use in actions like `await page.goto('/')`. */ 
-    baseURL: '', 
+    baseURL: urls.LOGIN_URL, 
     headless: false, 
      
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */ 
@@ -59,7 +60,7 @@ const config: PlaywrightTestConfig = {
     { 
       name: 'chromium', 
       use: { 
-        baseURL: '', 
+        baseURL: urls.LOGIN_URL, 
         browserName: `chromium`, 
         channel: `chrome`,        
         viewport: { width: 1720, height: 850 }, 
@@ -68,7 +69,7 @@ const config: PlaywrightTestConfig = {
         trace: `retain-on-failure`, 
         storageState: 'state.json', 
         launchOptions: { 
-          slowMo: 250, 
+          slowMo: 500, 
           headless: false, 
           tracesDir: '../test-artifacts/trace',                            
         },    
@@ -86,7 +87,7 @@ const config: PlaywrightTestConfig = {
         trace: `retain-on-failure`, 
         storageState: 'state.json', 
         launchOptions: { 
-          slowMo: 250, 
+          slowMo: 500, 
           headless: false, 
           tracesDir: '../test-artifacts/trace',                            
         },    
@@ -104,7 +105,7 @@ const config: PlaywrightTestConfig = {
         trace: `retain-on-failure`, 
         storageState: 'state.json', 
         launchOptions: { 
-          slowMo: 250, 
+          slowMo: 500, 
           headless: false, 
           tracesDir: '../test-artifacts/trace',                            
         },    
