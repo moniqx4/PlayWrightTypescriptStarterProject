@@ -3,30 +3,30 @@
   "version": "1.0.0",
   "main": "index.ts",
   "repository": "https://github.com/moniqx4/PlayWrightTypescriptStarterProject.git",
-  "author": "",
+  "author": "ML Productions LLC",
   "license": "MIT",
   "scripts": {
     "pretest": "tsc --incremenetal -p tests/tsconfig.json",
-    "test": "npx playwright test -c tests-out"
+    "test": "npx playwright test",
+    "test-ct": "playwright test -c playwright-ct.config.ts"
   },
   "devDependencies": {
-    "@playwright/test": "^1.27.0",
-    "@types/lodash": "^4.14.186",
-    "@types/node": "^18.8.3",
-    "@typescript-eslint/eslint-plugin": "^5.39.0",
-    "@typescript-eslint/parser": "^5.39.0",
-    "allure-playwright": "^2.0.0-beta.19",
-    "axios": "^1.1.2",
-    "dayjs": "^1.11.5",
-    "eslint": "^8.25.0",
-    "expect-playwright": "^0.8.0",
+    "@playwright/experimental-ct-react": "^1.41.2",
+    "@playwright/test": "^1.41.2",
+    "@types/lodash": "^4.14.202",
+    "@types/node": "^20.11.20",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
+    "allure-playwright": "^2.12.2",
+    "axios": "^1.6.7",
+    "csv-parse": "^5.5.3",
+    "dayjs": "^1.11.10",
+    "dotenv": "^16.4.5",
+    "eslint": "^8.57.0",
     "lodash": "^4.17.21",
-    "playwright": "^1.27.0",
-    "playwright-cli": "^0.180.0",
-    "playwright-core": "^1.27.0",
-    "typescript": "^4.8.4"
+    "typescript": "^5.3.3"
   },
   "dependencies": {
-    "dotenv": "^16.0.3"
+    "@axe-core/playwright": "^4.8.5"
   }
 }

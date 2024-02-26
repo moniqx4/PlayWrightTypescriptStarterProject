@@ -1,5 +1,4 @@
-import { expect } from '@playwright/test' 
-import { Page } from 'playwright-core' 
+import { expect, Locator, Page } from '@playwright/test'
 
 /** The function takes in an endpoint path , wrapping to wait on some specified element action that fires off an api event, and then waits 
  * til that event has complete  
@@ -31,4 +30,36 @@ export async function interceptAndWaitValidate(page: Page, endpointPath: string,
     page.waitForResponse(`@${endpointPath.toLowerCase()}`) 
     expect(response.status()).toBe(200); 
   }) 
+}
+
+
+/** Wait for Event then run page action, for example page.locator('somelocator').click()
+ * @param  {any} eventType
+ * @param  {Promise<Locator>} elementAction
+ */
+ export async function waitForEventRunAction(page: Page, eventType: any, elementAction: Promise<Locator>): Promise<void> {
+  const [popup] = await Promise.all([
+    // It is important to call waitForEvent before click to set up waiting.
+    await page.waitForEvent(eventType),    
+    await elementAction
+  ])
+}
+
+export async function pollForEndpointResponse(page: Page, endpoint: string, timeout= 10000) {
+  await expect.poll(async () => {
+    const response = await page.request.get(endpoint);
+    return response.status();
+  }, {
+    // Custom error message, optional.
+    message: 'make sure API eventually succeeds', // custom error message
+    // Poll for 10 seconds; defaults to 5 seconds. Pass 0 to disable timeout.
+    timeout: timeout,
+  }).toBe(200);
+}
+
+export const WaitService = {
+  interceptAndWaitValidate,
+  interceptAndWait,
+  waitForEventRunAction,
+  pollForEndpointResponse
 }

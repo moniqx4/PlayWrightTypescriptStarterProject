@@ -1,4 +1,4 @@
-import { test, expect } from '@playwright/test'
+import { test, expect } from '../fixtures/services'
 
 test.describe('Test API Tests', () => {
   /* this test is an example of interepting an API call, and injecting it with my own test data and then displaying it on the page */

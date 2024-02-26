@@ -22,11 +22,17 @@
   "include": ["*.ts"],  
   "exclude": ["*.js"], 
   "paths": { 
-    "@pages/*": ["pages-objects/*"],    
-    "@tests/*": ["tests/**/*"],     
+    "@pages/*": ["src/pages-objects/*"],
+    "@services/*": ["src/services/*"],    
+    "@constants/*": ["src/constants/**/*"],
+    "@utils/*": ["src/utils/**/*"],
+    "@fixtures/*": ["src/fixtures/*"],
   }, 
   "files": [ 
-    "global.d.ts"     
+    "global.d.ts",
+    "src/constants/types/APITypes.d.ts",
+    "src/constants/types/NavigationTypes.d.ts",
+    "src/constants/types/ReportTypes.d.ts", 
   ]  
 }
 
